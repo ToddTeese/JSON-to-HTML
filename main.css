@@ -1,0 +1,39 @@
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.displayArea {
+    width: 100%;
+    border: 1px solid rgb(220,220,210);
+}
+
+[data-path] {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid rgb(230,230,230);
+}
+
+[data-key]::before {
+    content: ' ' attr(data-key);
+}
+
+[data-value]::after {
+    content: ' : ' attr(data-value);
+}
+
+[data-hidden='true'] > div {
+    display:none;
+}
+
+button {
+    margin-left: 1rem;
+}
+
+[data-hidden='true'] > button::after {
+    content: '+';
+}
+
+button::after {
+    content: '-';
+}

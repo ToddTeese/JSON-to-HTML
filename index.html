@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>JSON Visualizer</title>
+        <link rel="stylesheet" href="./main.css" />
+    </head>
+
+    <body>
+        <h1>JSON Visualizer</h1>
+
+        <h2>Why Make This?</h2>
+
+        <p>
+            We're looking into changing how we handle form submissions. Currently we're saving multiple times to multiple objects, by using JSON, we are able
+            to have a single submission, we can then use the json to create subsequent objects.
+        </p>
+
+        <p>
+            This piece is somewhat tangential in that all the saving and object creation is being done elsewhere, however we want to provide an easy way to 
+            view the object structure within the json, to make viewing and understanding form submission logs easier.
+        </p>
+
+        <p>
+            I'm a Salesforce Developer for a Consultancy in my day job, so this is just a standard web app way, I'll be making the Salesforce component 
+            available as well.
+        </p>
+
+        <p>
+            Having built this, a couple things stand out. Flattening of arrays and objects are a fundamental point to making data sources easier to work with.
+            Sorting of a flattened object is made easier by the fact that with path structure helps to understand the depth of the nesting, allowing for an 
+            easier transfer of information from JS object to HTML nests.
+        </p>
+
+        <div class="displayArea">
+            <div data-path="Account" data-key="Account" data-hidden='false'>
+                <div data-path="Account.Name" data-key="Name" ></div>
+                <div data-path="Account.ShippingPostalCode" data-key="ShippingPostalCode" data-value="T55 6TT"></div>
+                <div data-path="Account.ShippingStreet" data-key="ShippingStreet" data-value="Test Street"></div>
+                <div data-path="Account.Mailing" data-key="Mailing">
+                    <div data-path="Account.Mailing.Street" data-key="Street"></div>
+                </div>
+            </div>
+            <div data-path="Contact" data-key="Contact">
+                <div data-path="Contact.FirstName" data-key="FirstName"></div>
+                <div data-path="Contact.LastName" data-key="LastName"></div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./app.js"></script>
+
+    
+</html>
