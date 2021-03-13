@@ -7,18 +7,18 @@ let keysWithValues = [];
 let objectToDisplay = {};
 
 let testObject = {
-    Account: {
-        Name: 'TestAccountName',
-        ShippingPostalCode: 'T55 5TT',
-        ShippingStreet : 'TestShippingStreet',
-        Mailing: {
-            Street : 'TestMailingStreet'
+    Object1: {
+        StringKey: 'Lorem Ipsum',
+        NumberKey: 45,
+        Corporate : 'Buzzwords!',
+        Object1Subobject: {
+            StringKey : 'It\'s turtles all the way down'
         }
     },
-    Contact: {
-        FirstName: 'TestFirstName',
-        LastName: 'TestLastName',
-        Entries: ['Apple', 'Orange', {Name:'Pear', Type:'Fruit'}]
+    Object2: {
+        FirstName: 'Green',
+        LastName: 'Grocers',
+        Fruit: ['Apple', 'Orange', {Name:'Pear', Colour:'Green'}]
     }
 }
 
