@@ -32,6 +32,12 @@
             easier transfer of information from JS object to HTML nests.
         </p>
 
+        <label for="jsonInput">Input JSON</label>
+        <br/>
+        <textarea id="jsonInput" rows="5" cols="50"></textarea>
+        <br/>
+        <button onclick="changeJSON()">Submit</button>
+
         <div class="displayArea">
             <div data-path="Account" data-key="Account" data-hidden='false'>
                 <div data-path="Account.Name" data-key="Name" ></div>
@@ -48,6 +54,8 @@
         </div>
     </body>
 
+    <script src="./utilities.js"></script>
+    <script src="./valueBlock.js"></script>
     <script src="./app.js"></script>
 
     
